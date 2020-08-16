@@ -2,7 +2,7 @@ import handler from "../../libs/handler-lib";
 import dynamoDb from "../../libs/dynamoDb";
 const table=process.env.tablePurchases;
 
-//Funcao para retornar as compras de um determinado cliente 
+//Funcao para retornar as compras de um determinado cliente
 export const main = handler( async (event, context) => {
     const parametros={
         TableName: table,

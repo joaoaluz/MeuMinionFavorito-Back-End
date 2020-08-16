@@ -24,9 +24,9 @@ export const main = handler(async (event, context) => {
     html: "<h1>Nova reserva!</h1><br><b>Nova realizada no e-commerce!</b>", // html body
   });
     if (!info.messageId) {
-        sucessSend.message = 'nao enviou';
+        sucessSend.message = 'Não conseguimos fazer a reserva!';
     } else {
-        sucessSend.message = 'Enviado com sucesso';
+        sucessSend.message = 'Reservado com sucesso!';
     }
     return sucessSend.message;
 });
