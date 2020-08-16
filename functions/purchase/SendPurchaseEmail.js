@@ -18,7 +18,7 @@ export const main = handler(async (event, context) => {
     // envia o emai utilizndo o objeto transporter criado
     let info = await transporter.sendMail({
     from: '"Meu Minion Favorito 👻" <bgcjoaoluz@gmail.com>', // sender address
-    to: "jovictor47@gmail.com", // list of receivers
+    to: "jovictor47@gmail.com, engluzjoao@gmail.com", // list of receivers
     subject: "Nova reserva ✔", // Subject line
     text: "Nova reserva realizada no e-commerce", // plain text body
     html: "<h1>Nova reserva!</h1><br><b>Nova realizada no e-commerce!</b>", // html body
