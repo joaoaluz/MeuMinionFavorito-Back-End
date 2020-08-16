@@ -35,11 +35,11 @@ export const main = handler(async (event, context) => {
       });
     // send mail with defined transport object
     let info = await transporter.sendMail({
-    from: '"Meu Minion Favorito 👻" <bgcjoaoluz@gmail.com>', // sender address
+    from: '"Meu Minion Favorito 👻" <bgcjoaoluz@gmail.com>'+','+parametros.Item.client, // sender address
     to: "jovictor47@gmail.com", // list of receivers
     subject: "Nova reserva ✔", // Subject line
     text: "Nova reserva realizada no e-commerce", // plain text body
-    html: "<h1>Nova reserva!</h1><br><b> <br>Produto:"+ parametros.Item.purchaseProduct + "<br> Email do Cliente:"+ parametros.Item.client + "<br>" +"<br> Valor:"+ parametros.Item.purchaseValue + "<br></b>", // html body
+    html: "<h1>Nova reserva!</h1><br><b> <br>Produto:"+ parametros.Item.purchaseProduct + "<br></b>", // html body
     });
     if (!info.messageId) {
         sucessSend.message = 'nao enviou';
